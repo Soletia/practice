@@ -24,3 +24,23 @@ h1 {
   text-align: center;
   margin-top: 300px;
 }
+.divider {
+  width: 235px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.counter {  
+  background-color: rgb(80, 80, 80);
+  width: 235px;
+  border-radius: 5px;
+}
+button {
+  background-color: rgb(99, 99, 99);
+  width: 236px;
+}
+button:hover {
+  background-color: rgb(80, 80, 80);
+}
+.coun{
+  margin-top: 200px;
+}
