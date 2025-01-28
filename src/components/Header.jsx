@@ -1,6 +1,8 @@
+
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({value}) {
+  
     return (
       <div className="min-h-full">
         <nav className="bg-gray-800">
@@ -15,6 +17,7 @@ export default function Header() {
                     <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Тех. поддержка</a>
                     <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Форум</a>
                     <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Новости</a>
+                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">{value*2}</a>
                   </div>
                 </div>
               </div>
@@ -41,6 +44,7 @@ export default function Header() {
           </nav>
           </div>
           </div>
-
+  
 )
+
 }
