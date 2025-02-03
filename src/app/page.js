@@ -1,23 +1,57 @@
-'use client'
-import { useState } from "react";
+"use client";
 
-export default function Home({value, setValue}) {
-  
+import Link from "next/link";
+
+function Home() {
   return (
-
-<main>
-
-     <center>
-     <p className="coun">Счетчик:</p>
-      <div className="counter">
-        {value}<br/>
+    <div>
+      <main>
+        <div className="rounded-x-left photo-box">
+          <h1 className="main-header text-white">
+            Добро пожаловать в мир <br/> неограниченного творчества!
+          </h1>
+          <span className="quite text-white ">
+            Присоединяйтесь к тысячам креативных людей, которые уже нашли всё
+            необходимое для своих проектов.
+          </span>
+          <div className="round-18 bg-white flex justify-round main-btn-list ">
+            <Link href='/auth/registration' className="main-button round-18">
+              Регистрация{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </Link>
+            <Link href='/auth/login' className="main-button round-18 ml-2">
+              Вход{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </Link>
+          </div>
         </div>
-        <hr className="divider"/>
-        <button className="text-white font-bold py-2 px-4 rounded" onClick={() => setValue(value + 1)}>Увеличить число на 1</button> <br/>
-        <button className="text-white font-bold py-2 px-4 rounded m-4" onClick={() => setValue(value - 1)}>Уменьшить число на 1</button>
+      </main>
+    </div>
+  );
+}
 
-      </center>
-    </main>
-        );
-  };
-
+export default Home;

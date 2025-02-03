@@ -1,50 +1,25 @@
-
 import Link from "next/link";
 
-export default function Header({value}) {
-  
-    return (
-      <div className="min-h-full">
-        <nav className="bg-gray-800">
-            <div className="flex h-16 items-center justify-between">
-              <div className="flex items-center">
-                <div className="shrink-0">
-                </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    <p className="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white">MicroDat</p>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Главная</a>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Тех. поддержка</a>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Форум</a>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Новости</a>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">{value*2}</a>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </nav>
-          <hr />
-          <div className="min-h-full">
-        <nav className="bg-gray-800">
-            <div className="flex h-16 items-center justify-between">
-              <div className="flex items-center">
-                <div className="shrink-0">
-                </div>
-                <div className="hidden md:block">
-                  <div className="ml-10 flex items-baseline space-x-4">
-                    <label href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Поиск</label>
-                    <input type="text" className="rounded-md bg-gray-600 outline-none -white" />
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Тех. поддержка</a>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Форум</a>
-                    <a href="#" className="rounded-md px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Новости</a>
-                  </div>
-                </div>
-              </div>
-          </div>
-          </nav>
-          </div>
-          </div>
-  
-)
+export default function Header() {
+  return (
+    <header>
+      <div className="header-main">
+        <Link href='/' className="header-back">
+          <svg
+            width="16"
+            height="16"
+            fill="currentColor"
+            className="bi bi-arrow-left"
 
+          >
+            <path
+              fillRule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+            />
+          </svg>
+        </Link>
+        <h1 className="header-name">ФОТО ВЫСТАВКА</h1>
+      </div>
+    </header>
+  );
 }
